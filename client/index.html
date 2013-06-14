@@ -1,0 +1,136 @@
+<head>     
+        <title>VITevents | VITx</title>
+        <!--[if lt IE 9]>
+		<META HTTP-EQUIV=Refresh CONTENT="0; URL=/browsers.htm"/>
+		<![endif]-->
+        <meta name="keywords" content="vit, academics, events, conferences, workshops, college, campus, vitevents, vitx">
+        <meta name="description" content="All the conferences, competions and events in one place at VIT">
+        <meta name="author" content="north2">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+        <link href="/normalize.css" rel="stylesheet" type="text/css">
+        <link href="/main.css" rel="stylesheet" type="text/css">
+        <!--[if IE 9]>
+			<link href="/css/ie9.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+      
+        <link rel="shortcut icon" href="http://www.case-3d.com/img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="http://www.case-3d.com/img/favicon.png" type="image/x-icon">
+        
+        <script src="/jquery-1.8.2.min.js" type="text/javascript"></script>
+
+        
+		<style type="text/css">.tk-proxima-nova-alt-condensed{font-family:"proxima-nova-alt-condensed",sans-serif;}.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/ceaf96/proxima-nova:n4,proxima-nova-alt-condensed:n4:n6.W0V:H:2,S9B:H:2,S9D:H:2/d?3bb2a6e53c9684ffdc9a98f3135b2a6291a3adf4ddd6fbab15024f5589241687c3abcc5ffd72ff9395561db97c266bb80566cdc3fdfca32ba6dc9af4d27017a8c927ab868ce8cc1b56fe60db6b64fb921ea194f983019b3f7174b1de4efb5bf82c2bd2dc448592bbbf40ca133ed31d7ee9f167d0e6d897fe181dbd9d575b62aa66e310a53acac1039baba6149c6873e980e7ad1a03f66a098f310766ebafb5976db9a45711f81d62bc28478314d6255aa64122e00218ca5c69f9983328552f54af90635555e66e4b3e4de83bb8fe85b15fd2f1c6a5c305dd91f1404a898db376b5efdb261ae13255c3a70508e8067812fd3ab14740e0628f07c96de339f57a03a4cc1b"><script type="text/javascript"> try { Typekit.load(); } catch (e) { } </script>
+
+
+    </head>
+
+    <body>   
+	    {{> siteHeader}}
+	    
+    </body>
+        
+    		
+    <!-- Ukoliko u listi ima samo jedan rad (moguće kod prikaza radova za određenog klijenta), onda se ovoj listi treba dodat klasa "withSingleProject" -->
+
+
+
+        <!--
+        <script src="/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+        <script src="/modernizr-2.6.2.min.js" type="text/javascript"></script>
+        <script src="/jquery.ba-hashchange.min.js" type="text/javascript"></script>
+        <script src="/jquery.ba-resize.min.js" type="text/javascript"></script>
+        <script src="/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="/jquery.waitforimages.min.js" type="text/javascript"></script>
+        
+        <script src="/main(1).js" type="text/javascript"></script>
+        <script src="/navigation.js" type="text/javascript"></script>
+        <script src="/plugins.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $('#AJAXload').hide();
+        </script>
+        -->
+<template name="eventsList">
+<ul class="projectList">
+    	        <li>
+                    <a onclick="getClientProjects(&#39;a75e57cb-58ef-45fc-8335-4fca79eeaad9&#39;);">
+    				    <img src="/jds-logo.png" alt="Image description">
+    			        <div class="projectInfo">
+	    			        <hgroup>
+		    			        <h2 class="projectTitle">JDS Architects</h2>
+		    			        <h3 class="subtitle">JDS</h3>
+	    			        </hgroup>
+    			        </div>
+    		        </a>
+    	        </li>
+    	        <li>
+                    <a onclick="getClientProjects(&#39;a75e57cb-58ef-45fc-8335-4fca79eeaad9&#39;);">
+    				    <img src="/jds-logo.png" alt="Image description">
+    			        <div class="projectInfo">
+	    			        <hgroup>
+		    			        <h2 class="projectTitle">JDS Architects</h2>
+		    			        <h3 class="subtitle">JDS</h3>
+	    			        </hgroup>
+    			        </div>
+    		        </a>
+    	        </li>
+    	        <li>
+                    <a onclick="getClientProjects(&#39;a75e57cb-58ef-45fc-8335-4fca79eeaad9&#39;);">
+    				    <img src="/jds-logo.png" alt="Image description">
+    			        <div class="projectInfo">
+	    			        <hgroup>
+		    			        <h2 class="projectTitle">JDS Architects</h2>
+		    			        <h3 class="subtitle">JDS</h3>
+	    			        </hgroup>
+    			        </div>
+    		        </a>
+    	        </li>
+    	        
+ 
+    </ul>
+    </div></div>
+</template>        
+        
+        
+<template name="siteHeader">
+	<header id="siteHeader">
+            <div id="allLinks">
+	            <div class="container">
+                    <h1 id="siteLogo">
+                        <a id="a_logo" title="Some cool useful title"><img src="/logo_case3d.png" alt="Case 3D"></a>
+                    </h1>
+	    	        <nav id="mainNav">
+	    		        <h1 class="hidden">Main navigation</h1>
+		    			<ul>
+		    				<li><a id="a_home" title="Homepage">Home</a></li>
+                            <li><a id="a_work" title="View our projects">Work</a></li>
+                            <li><a id="a_about" title="Who are we">About us</a></li>
+                            <li class="active"><a id="a_clients" title="Who we work for">Clients</a></li>
+                            <li><a id="a_news" title="See what&#39;s new">News</a></li>
+                            <li><a id="a_process" title="How we work">Process</a></li>
+                            <li><a id="a_contact" title="Get in touch">Contact</a></li>
+		    	        </ul>
+	    	        </nav>
+                    
+                    
+                    <img id="AJAXload" src="/loading.gif" width="25" height="25" style="margin-top: 8px; display: none;">
+	            </div>
+            </div>
+    		
+            <div id="justMenu" class="hidden">
+    	        <a title="Some cool useful title" style="cursor:pointer">Menu</a>
+            </div>
+        </header>
+        
+<div id="content-target" style="">
+<div id="frame" class="clients padding">
+    <header class="first sectionHeader textContainer">
+    	<hr class="divider first">
+    	
+    	
+    </header>
+        			{{> eventsList}}
+
+</template>       
+     

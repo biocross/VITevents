@@ -6,15 +6,11 @@
 Meteor.methods({
   // options should include: title, description, x, y, public
   createEvent: function (options) {
-  
   	console.log("REACHED CREATE EVENT INSERTING NOW");
-  	
     options = options || {};
-    
     console.log(options.name);
     
     //second model side validation
-    
    return Events.insert({
      name: options.name,
 	 tagline: options.tagline,
@@ -26,7 +22,19 @@ Meteor.methods({
 	 category: options.category,
 	 cost: options.cost,			 
     });
+  },
+  
+  registerForEvent: function (options){
+	  console.log("now registering for event");
+	  options = options || {};
+	  return Registrations.insert({
+	  	userId: options.userId,
+	  	eventId: options.eventId,
+	  	date: String(Date.now()),
+	  });
+	  
   }
+  
 }); //end of methods
 
 

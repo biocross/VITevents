@@ -17,6 +17,7 @@
       
         <link rel="shortcut icon" href="http://www.case-3d.com/img/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="http://www.case-3d.com/img/favicon.png" type="image/x-icon">
+        
    
         
 		<!-- <style type="text/css">.tk-proxima-nova-alt-condensed{font-family:"proxima-nova-alt-condensed",sans-serif;}.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/ceaf96/proxima-nova:n4,proxima-nova-alt-condensed:n4:n6.W0V:H:2,S9B:H:2,S9D:H:2/d?3bb2a6e53c9684ffdc9a98f3135b2a6291a3adf4ddd6fbab15024f5589241687c3abcc5ffd72ff9395561db97c266bb80566cdc3fdfca32ba6dc9af4d27017a8c927ab868ce8cc1b56fe60db6b64fb921ea194f983019b3f7174b1de4efb5bf82c2bd2dc448592bbbf40ca133ed31d7ee9f167d0e6d897fe181dbd9d575b62aa66e310a53acac1039baba6149c6873e980e7ad1a03f66a098f310766ebafb5976db9a45711f81d62bc28478314d6255aa64122e00218ca5c69f9983328552f54af90635555e66e4b3e4de83bb8fe85b15fd2f1c6a5c305dd91f1404a898db376b5efdb261ae13255c3a70508e8067812fd3ab14740e0628f07c96de339f57a03a4cc1b"><script type="text/javascript"> try { Typekit.load(); } catch (e) { } </script> -->
@@ -46,7 +47,11 @@ function animater(obj){
 		    				<li class="active"><a id="a_home" href="/" title="Homepage">Home</a></li>
                             <li><a id="a_work" href="/addNewEvent" title="">Add New Event</a></li>
 
-                            {{loginButtons}}
+                            {{#if currentUser}}
+                            	{{> userLoggedIn}}
+                            {{else}}
+                            	{{> userLoggedOut}}
+                            {{/if}}	
 		    	        </ul>
 	    	        </nav>
                     
@@ -224,6 +229,21 @@ function animater(obj){
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
 {{/isolate}}
+</template>
+
+<template name="userLoggedIn">
+	{{#if loggingIn}}
+		<li class="active"><a  title="Login Process...">Logging In</a></li>
+	{{else}}
+		<li class="active"><a  title="Current User">{{currentUser.profile.name}}</a></li>
+		<li class="active"><a id="logoutButton" title="Logout">Logout</a></li>
+	{{/if}}
+
+</template>
+
+<template name="userLoggedOut">
+	<li class="active"><a id="loginButton" title="Login Button">Log In to VITevents</a></li>
+
 </template>
 
 

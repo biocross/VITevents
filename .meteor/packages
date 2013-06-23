@@ -6,6 +6,5 @@
 insecure
 preserve-inputs
 accounts-facebook
-accounts-ui
 jquery
-accounts-password
+accounts-ui

@@ -1,3 +1,14 @@
+Accounts.loginServiceConfiguration.remove({
+	service: "facebook"
+});
+
+Accounts.loginServiceConfiguration.insert({
+	service: 'facebook',
+	appId: '239533019505160',
+	secret: '4ddcad2e3a21c853cccb031cc89a9975'
+});
+
+
 Accounts.onCreateUser(function (options, user) {
   try{
 	   var accessToken = user.services.facebook.accessToken, result, profile;
@@ -7,13 +18,11 @@ Accounts.onCreateUser(function (options, user) {
 	  result =  Meteor.http.call("GET", url);
 	   if (result.error){
 		   console.log(result);
-		   console.log("errorrrrrrrrrrrr");
 	   }
 	   profile = _.pick(result.data, "name", "email", "id");
-	    
-	    //Parse:
+	   console.log(profile.id);
+	   user.profile = profile; 	    
 	
-	  user.profile = profile;
   }
   catch(e){
 	  console.log(e);

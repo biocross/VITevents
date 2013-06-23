@@ -32,8 +32,16 @@ Meteor.methods({
 	  	eventId: options.eventId,
 	  	date: String(Date.now()),
 	  });
-	  
-  }
+  },
+  
+  unregisterFromEvent: function(options){
+	  console.log("now unregistering from event");
+	  options = options || {};
+	  return Registrations.remove({
+		  userId: options.userId,
+		  eventId: options.eventId
+	  });
+  }  
   
 }); //end of methods
 
@@ -73,4 +81,5 @@ EventID  (String)
 UserID (String)
 Date and Time of Registration (Date)
 */
+
 

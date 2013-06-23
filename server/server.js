@@ -6,7 +6,6 @@
 
 */
 if (Meteor.isServer) {
-
     
 
     Meteor.publish("events", function(){

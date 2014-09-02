@@ -1,0 +1,42 @@
+<template name="AppHome">
+   
+<div class="applicationHome">
+               <header>
+                  <form style="opacity: 1; -webkit-transform: translate3d(0px, -50%, 0px);">
+                     <div class="page-title">Explore Events Around Campus</div>
+                     <div class="input-symbol center search-button">
+                        <span class="icon-search"></span>
+                        <input class="search-field" type="text" name="search" placeholder="Search events now">
+                     </div>
+                     <a href="/" class="learn-more inverse">Learn more about VITevents</a>
+                  </form>
+               </header>
+
+               <section id="packages" class="waypoint">
+                  <div class="section-heading center">
+                     <h2 class="section-title">Trending</h2>
+                  </div>
+                  <ol class="grid fixed-height">
+                     {{> package}}
+                     {{> package}}
+                     {{> package}}
+                     {{> package}}
+                     {{> package}}
+                     {{> package}}
+                     {{> package}}
+                     {{> package}}
+                     {{> package}}
+                     {{> package}}
+
+                  </ol>
+               </section>
+            </div> <!-- /applicationHome -->
+</template>
+
+<template name="package">
+   <li class="module packagesItem">
+      <h4 class="subtitle">mizzao </h4>
+      <a class="title">bootstrap-3</a>
+      <p class="description">HTML, CSS, and JS framework.</p>
+   </li>
+</template>

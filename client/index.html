@@ -1,264 +1,76 @@
-<head>     
-        <title>VITevents | VITx</title>
-        <!--[if lt IE 9]>
-		<META HTTP-EQUIV=Refresh CONTENT="0; URL=/browsers.htm"/>
-		<![endif]-->
-        <meta name="keywords" content="vit, academics, events, conferences, workshops, college, campus, vitevents, vitx">
-        <meta name="description" content="All the conferences, competions and events in one place at VIT">
-        <meta name="author" content="north2">
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
-        <link href="/normalize.css" rel="stylesheet" type="text/css">
-        <link href="/main.css" rel="stylesheet" type="text/css">
-        
-        <!--[if IE 9]>
-			<link href="/css/ie9.css" rel="stylesheet" type="text/css" />
-		<![endif]-->
-      
-        <link rel="shortcut icon" href="http://www.case-3d.com/img/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="http://www.case-3d.com/img/favicon.png" type="image/x-icon">
-        
-   
-        
-		<!-- <style type="text/css">.tk-proxima-nova-alt-condensed{font-family:"proxima-nova-alt-condensed",sans-serif;}.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/ceaf96/proxima-nova:n4,proxima-nova-alt-condensed:n4:n6.W0V:H:2,S9B:H:2,S9D:H:2/d?3bb2a6e53c9684ffdc9a98f3135b2a6291a3adf4ddd6fbab15024f5589241687c3abcc5ffd72ff9395561db97c266bb80566cdc3fdfca32ba6dc9af4d27017a8c927ab868ce8cc1b56fe60db6b64fb921ea194f983019b3f7174b1de4efb5bf82c2bd2dc448592bbbf40ca133ed31d7ee9f167d0e6d897fe181dbd9d575b62aa66e310a53acac1039baba6149c6873e980e7ad1a03f66a098f310766ebafb5976db9a45711f81d62bc28478314d6255aa64122e00218ca5c69f9983328552f54af90635555e66e4b3e4de83bb8fe85b15fd2f1c6a5c305dd91f1404a898db376b5efdb261ae13255c3a70508e8067812fd3ab14740e0628f07c96de339f57a03a4cc1b"><script type="text/javascript"> try { Typekit.load(); } catch (e) { } </script> -->
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="/css.css">
+   </head>
 
-<script>
-function animater(obj){
-	$("li").fadeOut(2000).promise(function(){
-		console.log("fisdvdsv");
-	});	
-	
-}
-</script>
- 
 
-    </head>
-    
-    <body>  
-    <header id="siteHeader">
-            <div id="allLinks">
-	            <div class="container">
-                    <h1 id="siteLogo">
-                        <a id="a_logo" title="Some cool useful title"><img src="/logo_case3d.png" alt="Case 3D"></a>
-                    </h1>
-	    	        <nav id="mainNav">
-	    		        <h1 class="hidden">Main navigation</h1>
-		    			<ul>
-		    				<li class="active"><a id="a_home" href="/" title="Homepage">Home</a></li>
-                            <li><a id="a_work" href="/addNewEvent" title="">Add New Event</a></li>
+   <body>
+   	<div class="applicationLayout">
+   		<div class="content">
+   			
 
-                            {{#if currentUser}}
-                            	{{> userLoggedIn}}
-                            {{else}}
-                            	{{> userLoggedOut}}
-                            {{/if}}	
-		    	        </ul>
-	    	        </nav>
-                    
-                    
-                    <img id="AJAXload" src="/loading.gif" width="25" height="25" style="margin-top: 8px; display: none;">
-	            </div>
-            </div>
-    		
-            <div id="justMenu" class="hidden">
-    	        <a title="Some cool useful title" style="cursor:pointer">Menu</a>
-            </div>
-        </header>
-        
-<div id="content-target" style="">
-<div id="frame" class="clients padding">
-    <header class="first sectionHeader textContainer">
-    	<hr class="divider first">
-    	
-    	
-    </header>
-    {{renderPage}}
-    </body>
-        
-    		
-    <!-- Ukoliko u listi ima samo jedan rad (moguće kod prikaza radova za određenog klijenta), onda se ovoj listi treba dodat klasa "withSingleProject" -->
+            <header class="applicationHeader white">
+               <div class="menu-button" alt="menu"><span class="icon-list"></span></div>
+               <div class="search-button" alt="search">
+                  <span class="icon-search"></span>
+                  <span class="text">Search</span>
+               </div>
+               <a class="logo" href="/">VITevents</a>
+               <a class="btn-github"><span class="icon-github"></span> <span class="text">Feedback</span></a>
+            </header>
+
+            {{> AppHome}}
+
+            <footer class="applicationFooter">
+               <div class="footer-row">
+                  <section class="about">
+                     <div class="subtitle">About</div>
+                     <p class="desc">VITevents is a full fledged Event Management System for VIT. And a lot, lot more.
+                     </p>
+                     <a href="http://percolatestudio.com/" class="attribution inverse"><span class="icon-percolate"></span> <span>VITx System</span></a>
+                  </section>
+                  <section class="links">
+                     <div class="documentation">
+                        <div class="subtitle">Learn More</div>
+                        <div class="list-vertical">
+                           <a href="http://atmospherejs.com/docs/installing" class="inverse">Get Started with VITevents</a>
+                           <a href="http://atmospherejs.com/docs/publishing" class="inverse">Publish Your Event</a>
+                        </div>
+                        <div class="subtitle">Weekly Events Update @ VIT</div>
+                        <form action="">
+                           <input type="hidden" name="u" value="4eaab348037bea8afae9acd5f">
+                           <input type="hidden" name="id" value="30061b34ec">
+                           <div class="input-symbol right">
+                              <input name="EMAIL" class="inverse" type="email" size="20" value="" placeholder="Add your email">
+                              <button type="submit" class="icon-proceed inverse" name="subscribe" id="mc-embedded-subscribe"></button>
+                           </div>
+                        </form>
+                     </div>
+                     <dl class="stats">
+                        <dt>Events</dt>
+                        <dd>0001</dd>
+                        <!-- <dd>23</dd>
+                           <dt>Categories</dt> -->
+                     </dl>
+                  </section>
+               </div>
+            </footer>
+
+
+   		</div> <!-- /content -->
+   	</div> <!-- /applicationLayout -->
+   </body>
 
 
 
-        <!--
-        <script src="/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
-        <script src="/modernizr-2.6.2.min.js" type="text/javascript"></script>
-        <script src="/jquery.ba-hashchange.min.js" type="text/javascript"></script>
-        <script src="/jquery.ba-resize.min.js" type="text/javascript"></script>
-        <script src="/jquery.mousewheel.min.js" type="text/javascript"></script>
-        <script src="/jquery.waitforimages.min.js" type="text/javascript"></script>
-        
-        <script src="/main(1).js" type="text/javascript"></script>
-        <script src="/navigation.js" type="text/javascript"></script>
-        <script src="/plugins.js" type="text/javascript"></script>
-
-        <script type="text/javascript">
-            $('#AJAXload').hide();
-        </script>
-        -->   
-        
-        
-<!-- Pages -->        
-        
-<template name="eventsList">
-<ul class="projectList">
-    	   
-    	        {{#each EventClass}}
-    	        <li>
-                    <a href="/event/{{_id}}">
-    				    <img src="/jds-logo.png" alt="Image description">
-    			        <div class="projectInfo">
-	    			        <hgroup>
-		    			        <h2 class="projectTitle">{{name}}</h2>
-		    			        <h3 class="subtitle">{{tagline}}</h3>
-	    			        </hgroup>
-    			        </div>
-    		        </a>
-    	        </li>
-    	        {{/each}}    	        	
-    	        
-    	        
- 
-    </ul>
-    </div></div>
-</template>    
-
-<template name="eventEntry">
-	<form class="sign-up">
-	<h1 class="sign-up-title"> Add an Event </h1>
-	<!-- Still need to add Event time /date type single day and shit -->
-	<input type="text" placeholder="Name of the event" id="name" class="sign-up-input" autofocus required> <br />
-	<input type="text" placeholder="Tagline of the event" id="tagline" class="sign-up-input" required><br />
-	<input type="text" placeholder="Venue" id="venue" class="sign-up-input" required><br />
-	<input type="text" placeholder="Description of the Event" id="description" class="sign-up-input" required><br />
-	<input type="number" placeholder="Maximum Number of Registrations" id="capacity" class="sign-up-input" required><br />
-	<label for="date"> Event On: </label>
-	<input type="date" placeholder="Date of the Event" id="date" class="sign-up-input" required>  <br />
-	<label for="organiser"> Event By: </label><br />
-	<select id="organiser" class="sign-up-input" required>
-		<option value="IETE">IETE</option>
-		<option value="IEEE">IEEE</option>
-		<option value="IEEE-PES">IEEE-PES</option>
-		<option value="CSI">CSI</option>
-	</select>  <br />
-	<label for="category">Event Category: </label><br />
-	<select id="category" class="sign-up-input" required>
-		<option value="Workshop">Workshop</option>
-		<option value="Conference">Conference</option>
-		<option value="Exhibition">Exhibition</option>
-		<option value="Competition">Competition</option>
-	</select>  <br />
-		<label for="eventCreatedBy"> Posting Event As: </label>
-		<input type="text" id="eventCreatedBy" placeholder="Event created by person?" class="sign-up-input"/><br />
-
-	<h4> Event Cost: </h4>
-	<!--
-	<input type="radio" name="eventCost" /> Free 
-	<input type="radio" name="eventCost" /> Paid
-	-->
-	<select id="eventCost" class="sign-up-input" required>
-		<option value="Free"> Free </option>
-		<option value="Paid"> Paid </option>
-	</select>
-	<br />
-  {{>captcha}}
-	<br />
-	<br />
-	<input type="submit" value="Add Event" class="sign-up-button save">	 
-	</form>
-	
-	{{>disqus}}
-	
-   
-    
-</template> 
-
-<template name="404">
-	<div style="text-align: center; padding-top: 10%;"> 
-	<h2> Sorry, the page you're looking for is not available. </h2>
-	<a href="/"> Return to Home </a>
-	</div>
-</template> 
 
 
 
-<template name="singleEvent">
-	<div style="text-align: center; padding-top: 10%;"> 
-	{{#each post}}
-	<h2> {{name}} </h2>
-	<h3> {{tagline}} </h3>
-	{{/each}}
-	<br /><br /><br />
-
-	{{#if registrationStatus}}
-		<button class="sign-up-button unregister" style="width: 300px;">  Unregister From This Event </button>
-	{{/if}}
-	{{#unless registrationStatus}}
-		<button class="sign-up-button register" style="width: 300px;">  Register For This Event </button>
-	{{/unless}}
-		
-	<br /><br /><br />
-	<br /><br /><br /><a href="/"> Return to Home</a>
-	</div>
-</template>
-  
-  
-  
-  
-<!-- Modules -->  
-  
-<template name="captcha"> 
-	{{#isolate}}
-	 <script type="text/javascript"
-     src="http://www.google.com/recaptcha/api/challenge?k=6LfQ4eISAAAAAMQcJHZtc_kfjQBIGoWdCbBkx4ON">
-  </script>
-     <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LfQ4eISAAAAAMQcJHZtc_kfjQBIGoWdCbBkx4ON"
-         height="300" width="500" frameborder="0"></iframe><br>
-     <textarea name="recaptcha_challenge_field" rows="3" cols="40">
-     </textarea>
-     <input type="hidden" name="recaptcha_response_field"
-         value="manual_challenge">
-  {{/isolate}}
-</template>  
-
-<template name="disqus">
-{{#isolate}}
-<div id="my-disqus" style="padding-left: 20%; width: 60%;">
-<div id="disqus_thread"></div>
- <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-{{/isolate}}
-</template>
-
-<template name="userLoggedIn">
-	{{#if loggingIn}}
-		<li class="active"><a  title="Login Process...">Logging In</a></li>
-	{{else}}
-		<li class="active"><a  title="Current User">{{currentUser.profile.name}}</a></li>
-		<li class="active"><a id="logoutButton" title="Logout">Logout</a></li>
-	{{/if}}
-
-</template>
-
-<template name="userLoggedOut">
-	<li class="active"><a id="loginButton" title="Login Button">Log In to VITevents</a></li>
-
-</template>
 
 
-<!--
-if (typeof console == "object") {
-      if (Util.is_chrome) {
-        console.log("%cHey! Like what you see and enjoy looking under the hood? That's cool. We love curious people. You should join us and help us build great stuff. https://www.parse.com/jobs", "color: #0677c8; font-size: 18px; font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;");
-      } else {
-        console.log("Hey! Like what you see and enjoy looking under the hood? That's cool. We love curious people. You should join us and help us build great stuff. https://www.parse.com/jobs");
-      }
-    }
 
--->
 
-        
-        
-        
-        
+
+
+

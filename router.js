@@ -4,8 +4,8 @@ Router.map(function(){
   		path: '/'
 	});
     
-    this.route('packagePage', {
-    	path: '/package'
+    this.route('eventPage', {
+    	path: '/event'
     });
     
   

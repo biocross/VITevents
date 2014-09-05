@@ -1,6 +1,5 @@
-<template name="AppHome">
-   
-<div class="applicationHome">
+<template name="appHome">
+   <div class="applicationHome">
                <header>
                   <form style="opacity: 1; -webkit-transform: translate3d(0px, -50%, 0px);">
                      <div class="page-title">Explore Events Around Campus</div>
@@ -17,26 +16,35 @@
                      <h2 class="section-title">Trending</h2>
                   </div>
                   <ol class="grid fixed-height">
-                     {{> package}}
-                     {{> package}}
-                     {{> package}}
-                     {{> package}}
-                     {{> package}}
-                     {{> package}}
-                     {{> package}}
-                     {{> package}}
-                     {{> package}}
-                     {{> package}}
+                     {{> packageListItem}}
+                     {{> packageListItem}}
+                     {{> packageListItem}}
+                     {{> packageListItem}}
+                     {{> packageListItem}}
+                     {{> packageListItem}}
+                     {{> packageListItem}}
+                     
 
                   </ol>
                </section>
             </div> <!-- /applicationHome -->
 </template>
 
-<template name="package">
+<template name="packageListItem">
    <li class="module packagesItem">
       <h4 class="subtitle">mizzao </h4>
       <a class="title">bootstrap-3</a>
       <p class="description">HTML, CSS, and JS framework.</p>
    </li>
+</template>
+
+<template name="Message">
+   <div class="applicationHome">
+      <header>
+         <form style="opacity: 1; -webkit-transform: translate3d(0px, -50%, 0px);">
+            <div class="page-title">{{message}}</div>
+            <a href="/" class="learn-more inverse">{{subtitle}}</a>
+         </form>
+      </header>
+   </div>
 </template>

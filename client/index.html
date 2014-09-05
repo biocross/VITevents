@@ -1,7 +1,8 @@
-
+<template name="layout">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <link rel="stylesheet" href="/css.css">
+      <title> VITevents </title>
    </head>
 
 
@@ -10,17 +11,9 @@
    		<div class="content">
    			
 
-            <header class="applicationHeader white">
-               <div class="menu-button" alt="menu"><span class="icon-list"></span></div>
-               <div class="search-button" alt="search">
-                  <span class="icon-search"></span>
-                  <span class="text">Search</span>
-               </div>
-               <a class="logo" href="/">VITevents</a>
-               <a class="btn-github"><span class="icon-github"></span> <span class="text">Feedback</span></a>
-            </header>
+            {{> appHeaderWhite}}
 
-            {{> AppHome}}
+            {{> yield}}
 
             <footer class="applicationFooter">
                <div class="footer-row">
@@ -61,10 +54,31 @@
    		</div> <!-- /content -->
    	</div> <!-- /applicationLayout -->
    </body>
+</template>
 
+<template name="appHeaderWhite">
+   <header class="applicationHeader white">
+      <div class="menu-button" alt="menu"><span class="icon-list"></span></div>
+      <div class="search-button" alt="search">
+         <span class="icon-search"></span>
+         <span class="text">Search</span>
+      </div>
+      <a class="logo" href="/">VITevents</a>
+      <a class="btn-github"><span class="icon-github"></span> <span class="text">Feedback</span></a>
+   </header>
+</template>
 
-
-
+<template name="appHeaderBlack">
+   <header class="applicationHeader black">
+   <div class="menu-button" alt="menu"><span class="icon-list"></span></div>
+   <div class="search-button" alt="search">
+      <span class="icon-search"></span>
+      <span class="text">Search</span>
+   </div>
+   <a class="logo" href="/">VITevents</a>
+   <a class="btn-github"><span class="icon-github"></span> <span class="text">Feedback</span></a>
+   </header>
+</template>
 
 
 

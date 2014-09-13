@@ -7,6 +7,10 @@ Router.map(function(){
     this.route('eventPage', {
     	path: '/event'
     });
+
+    this.route('newEventForm',{
+      path: 'newEvent'
+    });
     
   
   

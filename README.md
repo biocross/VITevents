@@ -8,4 +8,5 @@ Built on a very experimental Javascript/Node.JS Framework - Meteor (http://meteo
 Will fully integrate into VITx, an upcoming Central System of Applications to make life in VIT better.
 
 Siddharth Gupta
-Summer 2013
+As on 12th September 2014
+
